@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 403 - Acceso Prohibido</title>
+    <title>Error 400 - Solicitud Incorrecta</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -21,56 +22,51 @@
             justify-content: center;
             overflow: hidden;
             position: relative;
-            padding: 20px;
         }
 
         .container {
             text-align: center;
             max-width: 800px;
-            padding: 2.5rem;
+            padding: 2rem;
             z-index: 10;
             width: 90%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin: 0 auto;
         }
 
         .error-code {
-            font-size: 14rem; /* Aumentado para laptops */
+            font-size: 12rem;
             font-weight: 800;
             color: #ffffff;
             text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-            margin-bottom: 1.5rem; /* Aumentado */
+            margin-bottom: 1rem;
             animation: float 3s ease-in-out infinite;
-            line-height: 1;
         }
 
         .error-title {
-            font-size: 3rem; /* Aumentado para laptops */
+            font-size: 2.5rem;
             color: #ffffff;
-            margin-bottom: 1rem; /* Aumentado */
+            margin-bottom: 0.7rem;
             font-weight: 700;
         }
 
         .error-message {
-            font-size: 1.4rem; /* Aumentado para laptops */
+            font-size: 1.2rem;
             color: #d1d5db;
-            margin-bottom: 2.5rem; /* Aumentado */
+            margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .buttons {
             display: flex;
-            gap: 1.5rem; /* Aumentado */
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1.2rem 2.5rem; /* Aumentado para laptops */
+            padding: 1rem 2rem;
             border-radius: 50px;
-            font-size: 1.2rem; /* Aumentado para laptops */
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -78,7 +74,7 @@
             outline: none;
             display: flex;
             align-items: center;
-            gap: 0.7rem; /* Aumentado */
+            gap: 0.5rem;
         }
 
         .btn-primary {
@@ -108,8 +104,8 @@
 
         .decoration {
             position: absolute;
-            width: 150px; /* Aumentado para laptops */
-            height: 150px; /* Aumentado para laptops */
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: radial-gradient(circle, rgba(239, 68, 68, 0.3) 0%, transparent 70%);
             animation: pulse 4s infinite;
@@ -160,8 +156,8 @@
 
         .mouse-follower {
             position: fixed;
-            width: 30px; /* Aumentado para laptops */
-            height: 30px; /* Aumentado para laptops */
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             background: rgba(239, 68, 68, 0.5);
             pointer-events: none;
@@ -171,85 +167,18 @@
             transition: transform 0.1s ease-out;
         }
 
-        /* Media query específico para laptops */
-        @media (min-width: 1024px) and (max-width: 1399px) {
-            .container {
-                max-width: 900px;
-                padding: 3rem;
-            }
-            
-            .error-code {
-                font-size: 16rem; /* Tamaño específico para laptops */
-            }
-            
-            .error-title {
-                font-size: 3.2rem; /* Tamaño específico para laptops */
-            }
-            
-            .error-message {
-                font-size: 1.5rem; /* Tamaño específico para laptops */
-            }
-            
-            .btn {
-                padding: 1.3rem 2.8rem; /* Tamaño específico para laptops */
-                font-size: 1.3rem; /* Tamaño específico para laptops */
-            }
-            
-            .decoration {
-                width: 160px; /* Tamaño específico para laptops */
-                height: 160px; /* Tamaño específico para laptops */
-            }
-        }
-
-        /* Ajustes para tablets */
-        @media (max-width: 1023px) {
-            .container {
-                padding: 2rem;
-            }
-            
-            .error-code {
-                font-size: 10rem;
-            }
-            
-            .error-title {
-                font-size: 2.5rem;
-            }
-            
-            .error-message {
-                font-size: 1.2rem;
-            }
-            
-            .btn {
-                padding: 1rem 2rem;
-                font-size: 1.1rem;
-            }
-            
-            .decoration {
-                width: 120px;
-                height: 120px;
-            }
-        }
-
-        /* Ajustes para móviles */
+        /* Responsive design */
         @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem;
-                width: 95%;
-            }
-            
             .error-code {
                 font-size: 8rem;
-                margin-bottom: 0.5rem;
             }
             
             .error-title {
                 font-size: 2rem;
-                margin-bottom: 0.5rem;
             }
             
             .error-message {
                 font-size: 1rem;
-                margin-bottom: 1.5rem;
             }
             
             .buttons {
@@ -258,86 +187,58 @@
             }
             
             .btn {
-                width: 100%;
-                max-width: 280px;
+                width: 80%;
                 justify-content: center;
-                padding: 0.9rem 1.5rem;
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 15px;
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
             }
             
             .container {
                 padding: 1rem;
-                width: 100%;
             }
-            
+        }
+
+        @media (max-width: 480px) {
             .error-code {
-                font-size: 5rem;
+                font-size: 6rem;
             }
             
             .error-title {
                 font-size: 1.5rem;
             }
             
-            .error-message {
-                font-size: 0.9rem;
-            }
-            
             .btn {
-                padding: 0.8rem 1.2rem;
+                width: 90%;
+                padding: 0.7rem 1.2rem;
                 font-size: 0.85rem;
             }
             
-            .decoration {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .mouse-follower {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        /* Para orientación horizontal en móviles */
-        @media (max-height: 500px) and (max-width: 1000px) {
             .container {
-                position: relative;
-                top: auto;
-                left: auto;
-                transform: none;
-                margin: 2rem auto;
-            }
-            
-            .error-code {
-                font-size: 5rem;
-            }
-            
-            .error-title {
-                font-size: 1.8rem;
-            }
-            
-            .error-message {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
-            
-            .buttons {
-                flex-direction: row;
-            }
-            
-            .btn {
-                width: auto;
-                padding: 0.7rem 1.2rem;
+                padding: 1rem;
+                width: 95%;
             }
         }
 
         /* Para pantallas muy grandes */
+        @media (min-width: 1200px) {
+            .error-code {
+                font-size: 15rem;
+            }
+            
+            .error-title {
+                font-size: 3rem;
+            }
+            
+            .error-message {
+                font-size: 1.4rem;
+            }
+            
+            .btn {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+        }
+
         @media (min-width: 1400px) {
             .error-code {
                 font-size: 18rem;
@@ -355,48 +256,6 @@
                 padding: 1.4rem 3rem;
                 font-size: 1.2rem;
             }
-            
-            .decoration {
-                width: 180px;
-                height: 180px;
-            }
-            
-            .mouse-follower {
-                width: 35px;
-                height: 35px;
-            }
-        }
-
-        /* Soporte para orientación landscape en móviles */
-        @media (max-height: 600px) and (orientation: landscape) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .error-code {
-                font-size: 5rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .error-title {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .error-message {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
-            
-            .buttons {
-                flex-direction: row;
-                flex-wrap: nowrap;
-            }
-            
-            .btn {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.85rem;
-            }
         }
     </style>
 </head>
@@ -412,16 +271,16 @@
 
     <div class="container">
         <div class="fade-in">
-            <div class="error-code">403</div>
-            <h1 class="error-title">Acceso Prohibido</h1>
+            <div class="error-code">400</div>
+            <h1 class="error-title">Solicitud Incorrecta</h1>
             <p class="error-message">
-                No tiene permisos suficientes para acceder a este recurso.<br>
-                La solicitud fue rechazada por el servidor.
+                La solicitud contiene sintaxis incorrecta y no puede ser comprendida por el servidor.<br>
+                Por favor, verifique la sintaxis de su solicitud.
             </p>
             
             <div class="buttons">
                 <button class="btn btn-primary" onclick="goToHome()">
-                    <i class="fas fa-home"></i> Ir a Inicio 
+                    <i class="fas fa-home"></i> Ir a Inicio
                 </button>
             </div>
         </div>
@@ -462,32 +321,9 @@
         // Function to go back to home page
         function goToHome() {
             // Cambia esta ruta por la dirección de tu página principal
-            window.location.href = '/400.html'; // Cambié a index.html que es más común para página de inicio
+            window.location.href = '/403.html'; // O cambia por la ruta correcta de tu sitio
         }
-
-        // Ajustar altura mínima para dispositivos con teclado virtual
-        function adjustLayoutForMobile() {
-            const container = document.querySelector('.container');
-            const windowHeight = window.innerHeight;
-            
-            if (windowHeight < 500) {
-                container.style.position = 'relative';
-                container.style.top = 'auto';
-                container.style.left = 'auto';
-                container.style.transform = 'none';
-                document.body.style.padding = '20px 0';
-            } else {
-                container.style.position = 'absolute';
-                container.style.top = '50%';
-                container.style.left = '50%';
-                container.style.transform = 'translate(-50%, -50%)';
-                document.body.style.padding = '20px';
-            }
-        }
-
-        // Ejecutar al cargar y al redimensionar
-        window.addEventListener('load', adjustLayoutForMobile);
-        window.addEventListener('resize', adjustLayoutForMobile);
     </script>
 </body>
 </html>
+```
