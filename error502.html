@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 500 - Error Interno del Servidor</title>
+    <title>Error 502 - Puerta de Enlace Incorrecta</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -271,18 +271,18 @@
 
     <div class="container">
         <div class="fade-in">
-            <div class="error-code">500</div>
-            <h1 class="error-title">Error Interno del Servidor</h1>
+            <div class="error-code">502</div>
+            <h1 class="error-title">Puerta de Enlace Incorrecta</h1>
             <p class="error-message">
-                Lo sentimos, ocurrió un error interno en nuestro servidor.<br>
-                Nuestro equipo técnico está trabajando para resolver el problema.
+                El servidor proxy recibió una respuesta inválida del servidor upstream.<br>
+                Por favor, inténtelo de nuevo más tarde o contacte con el administrador del sitio.
             </p>
             
-            <div class="buttons">
-                <button class="btn btn-primary" onclick="goToHome()">
-                    <i class="fas fa-home"></i> Ir a Inicio
-                </button>
-            </div>
+        <div class="buttons">
+            <a href="error503.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Ir a Inicio
+            </a>
+        </div>
         </div>
     </div>
 
@@ -318,11 +318,6 @@
             dec.style.animationDelay = `${index * 0.5}s`;
         });
 
-        // Function to go back to home page
-        function goToHome() {
-            // Cambia esta ruta por la dirección de tu página principal
-            window.location.href = '/502.html'; // O cambia por la ruta correcta de tu sitio
-        }
     </script>
 </body>
 </html>

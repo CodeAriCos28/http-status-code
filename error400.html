@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 504 - Tiempo de Espera Expirado</title>
+    <title>Error 400 - Solicitud Incorrecta</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -271,18 +271,18 @@
 
     <div class="container">
         <div class="fade-in">
-            <div class="error-code">504</div>
-            <h1 class="error-title">Tiempo de Espera Expirado</h1>
+            <div class="error-code">400</div>
+            <h1 class="error-title">Solicitud Incorrecta</h1>
             <p class="error-message">
-                El servidor proxy no recibió una respuesta válida del servidor upstream en el tiempo esperado.<br>
-                Por favor, inténtelo de nuevo más tarde.
+                La solicitud contiene sintaxis incorrecta y no puede ser comprendida por el servidor.<br>
+                Por favor, verifique la sintaxis de su solicitud.
             </p>
             
-            <div class="buttons">
-                <button class="btn btn-primary" onclick="goToHome()">
-                    <i class="fas fa-home"></i> Ir a Inicio
-                </button>
-            </div>
+        <div class="buttons">
+            <a href="error403.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Ir a Inicio
+            </a>
+        </div>
         </div>
     </div>
 
@@ -318,11 +318,6 @@
             dec.style.animationDelay = `${index * 0.5}s`;
         });
 
-        // Function to go back to home page
-        function goToHome() {
-            // Cambia esta ruta por la dirección de tu página principal
-            window.location.href = '/600.html'; // O cambia por la ruta correcta de tu sitio
-        }
     </script>
 </body>
 </html>

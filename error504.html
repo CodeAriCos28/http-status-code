@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 502 - Puerta de Enlace Incorrecta</title>
+    <title>Error 504 - Tiempo de Espera Expirado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -45,7 +45,7 @@
         .error-title {
             font-size: 2.5rem;
             color: #ffffff;
-            margin-bottom: 1rem;
+            margin-bottom: 0.7rem;
             font-weight: 700;
         }
 
@@ -271,17 +271,18 @@
 
     <div class="container">
         <div class="fade-in">
-            <div class="error-code">502</div>
-            <h1 class="error-title">Puerta de Enlace Incorrecta</h1>
+            <div class="error-code">504</div>
+            <h1 class="error-title">Tiempo de Espera Expirado</h1>
             <p class="error-message">
-                El servidor proxy recibió una respuesta inválida del servidor upstream.<br>
-                Por favor, inténtelo de nuevo más tarde o contacte con el administrador del sitio.
+                El servidor proxy no recibió una respuesta válida del servidor upstream en el tiempo esperado.<br>
+                Por favor, inténtelo de nuevo más tarde.
             </p>
             
             <div class="buttons">
-                <button class="btn btn-primary" onclick="goToHome()">
+                <a href="index.html" class="btn btn-primary">
                     <i class="fas fa-home"></i> Ir a Inicio
-                </button>
+                </a>
+            </div>
             </div>
         </div>
     </div>
@@ -318,11 +319,7 @@
             dec.style.animationDelay = `${index * 0.5}s`;
         });
 
-        // Function to go back to home page
-        function goToHome() {
-            // Cambia esta ruta por la dirección de tu página principal
-            window.location.href = '/503.html'; // O cambia por la ruta correcta de tu sitio
-        }
+
     </script>
 </body>
 </html>
