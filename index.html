@@ -419,12 +419,12 @@
                 La solicitud fue rechazada por el servidor.
             </p>
             
-            <div class="buttons">
-                <button class="btn btn-primary" onclick="goToHome()">
-                    <i class="fas fa-home"></i> Ir a Inicio 
-                </button>
-            </div>
+        <div class="buttons">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Ir a Inicio
+            </a>
         </div>
+    </div>
     </div>
 
     <script>
@@ -459,11 +459,6 @@
             dec.style.animationDelay = `${index * 0.5}s`;
         });
 
-        // Function to go back to home page
-        function goToHome() {
-            // Cambia esta ruta por la dirección de tu página principal
-            window.location.href = '/400.html'; // Cambié a index.html que es más común para página de inicio
-        }
 
         // Ajustar altura mínima para dispositivos con teclado virtual
         function adjustLayoutForMobile() {
